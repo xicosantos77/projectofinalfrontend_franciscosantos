@@ -1,0 +1,9 @@
+.footer-wrapper {
+    padding-left: 80px;
+    padding-right: 80px;
+    height: 560px;
+    background-color: #232536;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to make the footer stick to the bottom */
+}
