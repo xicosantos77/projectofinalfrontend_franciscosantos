@@ -29,7 +29,6 @@
 
     nav{
         ul{
-            
             height: 100%;
             display: flex;
             /*align-items: center;*/
@@ -38,6 +37,10 @@
 
             .header-nav-item{
                 margin-top: 12px;
+            }
+
+            #subscribe-button{
+                margin-right: 0;
             }
 
             li{

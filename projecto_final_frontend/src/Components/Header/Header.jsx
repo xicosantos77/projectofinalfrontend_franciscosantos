@@ -23,7 +23,7 @@ const Header = ()=> {
                         <li className="header-nav-item"><Link to="Blog">Blog</Link></li>
                         <li className="header-nav-item"><Link to="AboutUs">About Us</Link></li>
                         <li className="header-nav-item"><Link to="ContactUs">Contact Us</Link></li>
-                        <li id="subscribe-button"><Link to="Subscribe"><input type="button"  id="subscribe-button" value = "Subscribe" /></Link></li> 
+                        <li><Link to="Subscribe"><input type="button"  id="subscribe-button" value = "Subscribe" /></Link></li> 
                     </ul>
                 </nav>
             </div>

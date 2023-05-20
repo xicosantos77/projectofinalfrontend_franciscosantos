@@ -1,4 +1,14 @@
 @import "./Assets/Fonts/fonts.scss"; 
+  
+body{
+    min-height: 100vh;
+    
+}
+  
+img, picture,svg,video{
+    display:block;
+    max-width:100%;
+}
 
 #root{
     padding-top: 80px;

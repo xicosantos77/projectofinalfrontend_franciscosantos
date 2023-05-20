@@ -1,9 +1,156 @@
 .footer-wrapper {
+    height: auto;
     padding-left: 80px;
     padding-right: 80px;
-    height: 560px;
     background-color: #232536;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Set minimum height to make the footer stick to the bottom */
+
+    .footer-nav{
+        display: flex;
+
+        .footer-nav-logo{
+           width: 40%;
+
+           h1{
+            color: #f4f4f4;
+           }
+        }
+        .footer-nav-links{
+            display: flex;
+            justify-content: right;
+            //background-color: blue;
+            width: 60%;
+            nav{
+                ul{
+                    margin-right: 64px;
+                    display: flex;
+                    justify-content: flex-end;
+                    list-style-type: none;
+
+                    li{
+                        margin-top: 10px;
+                        margin-right: 40px;
+
+                        a{
+                            color: #f4f4f4;
+                            margin-right: 24px;
+                            font-size: 16px;
+                            text-decoration: none;
+                        }
+                    }
+
+                    li:hover{
+                        transform: scale(1.1);
+                        transition: ease .5s;
+                        font-weight: bold;
+                    }
+        
+                    li:not(:hover){
+                        transform: scale(1);
+                        transition: ease-in-out .2s;
+                    }
+                }
+            }
+        }
+    }
+
+    .footer-subs{
+        height: 256px;
+        background-color: rgba(256,256,256, 0.05);  // Set the desired background color
+        display: flex;
+
+        .footer-subs-title{
+            padding: 45px 64px;
+            width: 50%;
+            font-size: 18px;
+
+            h1{
+                text-align: left;
+                color: #f4f4f4;
+            }
+        }
+
+        .footer-subs-inputs{
+            padding: 100px 64px;
+            width: 50%;
+
+            .footer-subs-inputs-email{
+                height: 40px;
+                width: 250px;
+                background-color: rgba(256,256,256, 0.05);
+                border: 1px solid #232536;
+                border-radius: 0px;
+
+                &::placeholder{
+                    color: #232323;
+                }
+            }
+
+            .footer-subs-inputs-button{
+                background-color: #ffd050;
+                margin-left: 50px;
+                height: 42px;
+                border: 1px solid #232536;
+                border-radius: 0px;
+                width: 200px;
+            }
+
+            .footer-subs-inputs-button:hover{
+                transform: scale(1.1);
+                transition: ease .5s;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            .footer-subs-inputs-button:not(:hover){
+                transform: scale(1);
+                transition: ease-in-out .2s;
+            }
+        }
+    }
+
+    .footer-info{
+        padding-top: 10px;
+        display: flex;
+
+        .footer-info-address{
+            padding-left: 64px;
+            width: 50%;
+        }
+
+        .footer-info-socialmedia{
+            padding-right: 64px;
+            width: 50%;
+            nav{
+                ul{
+                    padding-top: 10px;
+                    display: flex;
+                    list-style-type: none;
+                    justify-content: right;
+                    li{
+                        margin-left: 40px;
+
+                        img{
+                            height: 30px;
+                            width: 30px;
+                            filter: grayscale(100%);
+                        }
+                    }
+
+                    li:hover{
+                        transform: scale(1.5);
+                        transition: ease .5s;
+                        font-weight: bold;
+                        cursor: pointer;
+                    }
+        
+                    li:not(:hover){
+                        transform: scale(1);
+                        transition: ease-in-out .2s;
+                    }
+                }
+            }
+        }
+    }
 }

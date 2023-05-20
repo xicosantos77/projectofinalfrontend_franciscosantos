@@ -1,9 +1,14 @@
-import React from "react";
+import React from "react"; 
+
+import Carroussel from "../Components/Carroussel-Banners/Carroussel";
 
 const Home= ()=> {
 
     return( 
-        <h1>Home</h1>
+        <div>
+            <h1>Home</h1>
+            <Carroussel></Carroussel>
+        </div>
     )
 }
 
