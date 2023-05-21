@@ -9,7 +9,6 @@ import instagram from '../../Assets/Images/Footer/instagram.png';
 import linkedin from '../../Assets/Images/Footer/linkedin.png';
 
 const Footer = ()=>{
-
     return(
         <footer className="footer-wrapper">
             <div className="footer-nav">
@@ -39,8 +38,8 @@ const Footer = ()=>{
             </div>
             <div className="footer-info">
                 <div className="footer-info-address">
-                    <h4>Finstreet 118 2561 Fintown</h4>
-                    <h4>test@test.com 123 4567 8910</h4>
+                    <p>FLAG - Full Stack Web Development Certification | Francisco Santos</p>
+                    <p>francisco.s.santos77@gmail.com | 91 769 22 11</p>
                 </div>
                 <div className="footer-info-socialmedia">
                     <nav>

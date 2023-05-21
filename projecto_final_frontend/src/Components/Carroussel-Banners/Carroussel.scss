@@ -5,22 +5,275 @@
 .carroussel{
     .carroussel-inner{
         width: 100%;
+        /*  PARA FAZER UMA TRANSIÇÃO SMOOTH
+        transition: transform 2s ease-in-out;
 
+        .carroussel-item{
+            &.active{
+                transform: translateX(0%);
+            }
+            &.hidden{
+                transform: translateX(-100%);
+            }
+        }
+        */
 
         .carroussel-item-img{
             position: relative;
             width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+                object-fit: cover;
+            }
+
+            .carroussel-item-textbox{
+                width: 50%;
+                .carroussel-item-textbox-title1{
+                    font-size: 20px;
+                    margin-top: 0px;
+                    margin-bottom: 24px;
+                }
+                .carroussel-item-textbox-title2{
+                    font-size: 56px;
+                    margin-top: 0px;
+                    margin-bottom: 24px;
+                }
+                .carroussel-item-textbox-author{
+                    font-size: 28px;
+                    margin-top: 0px;
+                    margin-bottom: 24px;
+                }
+                .carroussel-item-textbox-desc{
+                    font-size: 28px;
+                    margin-top: 0px;
+                    margin-bottom: 24px;
+                }
+                .carroussel-item-textbox-button{
+                    padding: 16px 48px;
+                    font-size: 20px;
+                    margin-top: 0px;
+                    background-color: #ffd050;
+                    border: none;
+                    font-weight: bold;
+                }
+
+                .carroussel-item-textbox-button:hover{
+                    transform: scale(1.1);
+                    transition: ease .5s;
+                    font-weight: bold;
+                    cursor: pointer;
+                }
+    
+                .carroussel-item-textbox-button:not(:hover){
+                    transform: scale(1);
+                    transition: ease-in-out .2s;
+                }
+            }
         }
 
         .carroussel-item-textbox{
             right: 0px;
-            top: 0px;
-            left: 0px;
+            top: 128px;
+            left: 80px;
             bottom: 0px;
             position: absolute;
         }
     }
+
     .carroussel-navigation{
-        position: absolute;
+        padding: 10px 80px;
+        display: flex;
+        justify-content: space-between;
+        background-color: #232536;
+
+        .next-button{
+            h1{
+                margin: 0px;
+                color: #f4f4f4
+            }
+
+            h1:hover{
+                transform: scale(1.5);
+                transition: ease .5s;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            h1:not(:hover){
+                transform: scale(1);
+                transition: ease-in-out .2s;
+            }
+        }
+
+        .prev-button{
+            h1{
+                margin: 0px;
+                color: #f4f4f4
+            }
+
+            h1:hover{
+                transform: scale(1.5);
+                transition: ease .5s;
+                font-weight: bold;
+                cursor: pointer;
+            }
+
+            h1:not(:hover){
+                transform: scale(1);
+                transition: ease-in-out .2s;
+            }
+        }
+
+    
+        .carroussel-navigation-progressbar{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+
+            .dot{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: #ccc;
+                margin: 0 5px;
+                transition: background-color 0.3s ease;
+
+                &.active{
+                    background-color: #000;
+                }
+            }
+        }
     }
 }
+
+// Responsive adjustments
+@media (max-width: 576px) {
+    .carroussel-inner {
+      .carroussel-item-img {
+        .carroussel-item-textbox {
+          width: 100%;
+
+          .carroussel-item-textbox-title1 {
+            font-size: 16px;
+            margin-bottom: 16px;
+          }
+
+          .carroussel-item-textbox-title2 {
+            font-size: 36px;
+            margin-bottom: 16px;
+          }
+
+          .carroussel-item-textbox-author,
+          .carroussel-item-textbox-desc {
+            font-size: 20px;
+            margin-bottom: 16px;
+          }
+
+          .carroussel-item-textbox-button {
+            padding: 12px 36px;
+            font-size: 16px;
+            margin-bottom: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 577px) and (max-width: 1200px) {
+    .carroussel-inner {
+      .carroussel-item-img {
+        .carroussel-item-textbox {
+          width: 60%;
+
+          .carroussel-item-textbox-title1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+
+          .carroussel-item-textbox-title2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+          }
+
+          .carroussel-item-textbox-author,
+          .carroussel-item-textbox-desc {
+            font-size: 24px;
+            margin-bottom: 20px;
+          }
+
+          .carroussel-item-textbox-button {
+            padding: 14px 40px;
+            font-size: 18px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+
+@media screen and (max-width: 1440px) {
+    .carroussel-inner {
+      .carroussel-item-img {
+        .carroussel-item-textbox {
+          width: 40%;
+
+          .carroussel-item-textbox-title1 {
+            font-size: 22px;
+            margin-bottom: 28px;
+          }
+
+          .carroussel-item-textbox-title2 {
+            font-size: 48px;
+            margin-bottom: 28px;
+          }
+
+          .carroussel-item-textbox-author,
+          .carroussel-item-textbox-desc {
+            font-size: 26px;
+            margin-bottom: 28px;
+          }
+
+          .carroussel-item-textbox-button {
+            padding: 18px 44px;
+            font-size: 22px;
+            margin-bottom: 28px;
+          }
+        }
+      }
+    }
+}
+
+  @media (min-width: 1441px) {
+    .carroussel-inner {
+      .carroussel-item-img {
+        .carroussel-item-textbox {
+          width: 30%;
+
+          .carroussel-item-textbox-title1 {
+            font-size: 24px;
+            margin-bottom: 32px;
+          }
+
+          .carroussel-item-textbox-title2 {
+            font-size: 56px;
+            margin-bottom: 32px;
+          }
+
+          .carroussel-item-textbox-author,
+          .carroussel-item-textbox-desc {
+            font-size: 28px;
+            margin-bottom: 32px;
+          }
+
+          .carroussel-item-textbox-button {
+            padding: 20px 48px;
+            font-size: 24px;
+            margin-bottom: 32px;
+          }
+        }
+      }
+    }
+  }

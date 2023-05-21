@@ -1,5 +1,6 @@
 import "./Carroussel.scss"; 
 import React, {useState} from 'react';
+import {useEffect} from "react";
 
 const Carroussel = ()=> {
 
@@ -24,6 +25,18 @@ const Carroussel = ()=> {
             setActiveIndex (activeIndex + 1);
        }
     };
+
+    // Timer para transição automática do carroussel
+
+    useEffect(() => {
+        const timer = setInterval(() => {
+            handleNext();
+        }, 5000);
+    
+        return () => {
+          clearInterval(timer);
+        };
+    }, [activeIndex]);
 
     // Array de items para o carroussel
 
@@ -80,46 +93,51 @@ const Carroussel = ()=> {
 
     return (
         <div className="carroussel">
-          <div className="carroussel-inner">
-            {items.map((item, index) => (
+            <div className="carroussel-inner">
+                {items.map((item, index) => (
                 <div
                 className={`carroussel-item ${index === activeIndex ? 'active' : 'hidden'}`}
                 key={index}
                 >
 
                 <div className="carroussel-item-img">
-                  <img src={item.image} alt={`Item ${index + 1}`} />
+                    <img src={item.image} alt={`Item ${index + 1}`} />
                 
                     <div className="carroussel-item-textbox">
-                        <h6>{item.postedOn}</h6>
-                        <h1>{item.title}</h1>
-                        <h6>{item.author}</h6>
-                        <p>{item.description}</p>
-                        <input type="button" value={item.buttonLabel} />
+                        <h6 className="carroussel-item-textbox-title1">
+                            {item.postedOn}
+                        </h6>
+                        <h1 className="carroussel-item-textbox-title2">
+                            {item.title}
+                        </h1>
+                        <h6 className="carroussel-item-textbox-author">
+                            {item.author}
+                        </h6>
+                        <p className="carroussel-item-textbox-desc">
+                            {item.description}
+                        </p>
+                        <input className="carroussel-item-textbox-button" type="button" value={item.buttonLabel} />
                     </div>
-
                 </div>
               </div>
             ))}
-          </div>
-          <div className="carroussel-navigation">
-            <button className="prev-button" onClick={handlePrev}>
-              Previous
-            </button>
-            <button className="next-button" onClick={handleNext}>
-              Next
-            </button>
-          </div>
-        {/*
-          <div className="carousel-progress">
-            {items.map((_, index) => (
-              <div
-                className={`dot ${index === activeIndex ? 'active' : ''}`}
-                key={index}
-              ></div>
-            ))}
-          </div>
-            */}
+            </div>
+            <div className="carroussel-navigation">
+                <div className="prev-button" onClick={handlePrev}>
+                    <h1>&lt;</h1>
+                </div>
+                <div className="carroussel-navigation-progressbar">
+                {items.map((_, index) => (
+                    <div
+                    className={`dot ${index === activeIndex ? 'active' : ''}`}
+                    key={index}
+                    ></div>
+                ))}
+                </div>
+                <div className="next-button" onClick={handleNext}>
+                    <h1>&gt;</h1>
+                </div>
+            </div>
         </div>
     );
 };
