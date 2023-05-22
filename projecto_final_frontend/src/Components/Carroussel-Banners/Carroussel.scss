@@ -120,28 +120,50 @@
                         display: none;
                     }
                 }
+
                 .carroussel-item-textbox-button{
-                    padding: 16px 48px;
-                    font-size: 20px;
-                    margin-top: 0px;
+                    width: 130px;
+                    padding: 16px 32px;
                     background-color: #ffd050;
                     border: none;
                     font-weight: bold;
 
+                    a{
+                        text-decoration: none;
+                        h2{
+                            margin: 0px;
+                            font-size: 20px;
+                            color: black;
+                        }
+                    }
+
                     @media screen and (max-width: 1440px){
+                        width: 80px;
                         padding: 12px 24px;
-                        font-size: 12px;
                         margin-bottom: 20px;
+
+                        a{
+                            h2{
+                                font-size: 12px;
+                            }
+                        }
                     }
 
                     @media screen and (max-width: 1200px){
+                        width: 80px;
                         padding: 8px 20px;
                         font-size: 12px;
-                        margin-bottom: 20px;
+
+                        a{
+                            h2{
+                                font-size: 12px;
+                                color: black;
+                            }
+                        }
                     }
 
                     @media screen and (max-width: 576px){
-                        width: 50%;
+                        width: 15%;
                     }
                 }
 

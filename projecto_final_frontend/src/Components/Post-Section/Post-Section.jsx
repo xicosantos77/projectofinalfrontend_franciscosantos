@@ -102,7 +102,7 @@ const Post_Section = ()=>{
                         <h2>{allPosts[selectedPost].title}</h2>
                         <p>{allPosts[selectedPost].desc}</p>
                         <div className="postsection-featuredposts-content-desc-button">
-                            <Link to={allPosts[selectedPost].link}>See more &gt;</Link>
+                            <Link to={allPosts[selectedPost].link}><h2>See more &gt;</h2></Link>
                         </div>
                     </div>
                 </div>

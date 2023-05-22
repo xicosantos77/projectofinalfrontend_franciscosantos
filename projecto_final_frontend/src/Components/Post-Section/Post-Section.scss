@@ -23,12 +23,22 @@
                 }
 
                 .postsection-featuredposts-content-desc-button{
+                    width: 110px;
                     padding: 16px 48px;
-                    font-size: 20px;
-                    text-decoration: none;
+                    
                     background-color: #ffd050;
                     border: none;
                     font-weight: bold;
+
+                    a{
+                        text-decoration: none;
+                        h2{
+                            margin: 0px;
+                            font-size: 20px;
+                            color: black;
+                            
+                        }
+                    }
                 }
 
                 .postsection-featuredposts-content-desc-button:hover{
@@ -36,6 +46,8 @@
                     transition: ease .5s;
                     font-weight: bold;
                     cursor: pointer;
+                    border: 1px solid orange;
+                    border-radius: 10px;
                 }
     
                 .postsection-featuredposts-content-desc-button:not(:hover){

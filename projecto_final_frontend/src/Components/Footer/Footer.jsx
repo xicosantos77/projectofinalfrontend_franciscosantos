@@ -32,8 +32,12 @@ const Footer = ()=>{
                     <h1>Subscribe to our newsletter to get latest updates and news</h1>
                 </div>
                 <div className="footer-subs-inputs">
-                    <input className="footer-subs-inputs-email" type="email" placeholder="Enter your email"/>
-                    <input className="footer-subs-inputs-button" type="button" value="Subscribe" />
+                    <div className="footer-subs-inputs-email">
+                        <input type="email" placeholder="Enter your email"/>
+                    </div>
+                    <div className="footer-subs-inputs-button">
+                        <Link to="/Subscribe"><h2>Subscribe</h2></Link>
+                    </div>
                 </div>
             </div>
             <div className="footer-info">
