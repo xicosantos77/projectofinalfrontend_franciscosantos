@@ -186,12 +186,12 @@
         padding: 10px 80px;
         display: flex;
         justify-content: space-between;
-        background-color: #232536;
+        background-color: #f4f4f4;
 
         .next-button{
             h1{
                 margin: 0px;
-                color: #f4f4f4
+                color: #232536;
             }
 
             h1:hover{
@@ -214,7 +214,7 @@
         .prev-button{
             h1{
                 margin: 0px;
-                color: #f4f4f4
+                color: #232536
             }
 
             h1:hover{
@@ -255,7 +255,7 @@
                 }
 
                 &.active{
-                    background-color: #000;
+                    background-color: #232536;
                 }
             }
         }

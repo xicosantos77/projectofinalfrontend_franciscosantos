@@ -9,7 +9,6 @@ const Carroussel = ()=> {
     //Botões prev e next
 
     const handlePrev = ()=> {
-      //  setActiveIndex((prevIndex) => (prevIndex === 0 ? items.length - 1 : prevIndex - 1));
         if(activeIndex === 0){
             setActiveIndex(items.length - 1);
         } else {
@@ -18,7 +17,6 @@ const Carroussel = ()=> {
     };
 
     const handleNext = ()=> {
-       // setActiveIndex((prevIndex) => (prevIndex === items.length ? items.length - 1 : prevIndex + 1));
        if(activeIndex === items.length - 1){
             setActiveIndex (0);
        } else {
