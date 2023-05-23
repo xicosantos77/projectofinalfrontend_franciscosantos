@@ -25,7 +25,6 @@
                 .postsection-featuredposts-content-desc-button{
                     width: 110px;
                     padding: 16px 48px;
-                    
                     background-color: #ffd050;
                     border: none;
                     font-weight: bold;
@@ -35,7 +34,7 @@
                         h2{
                             margin: 0px;
                             font-size: 20px;
-                            color: black;
+                            color: #232536;
                             
                         }
                     }
@@ -77,9 +76,15 @@
             .postsection-allposts-nav-link{
                 width: 50%;
                 p{
+                    text-decoration: none;
                     text-align: right;
                     font-size: 20px;
                     cursor: pointer;
+
+                    a{
+                        text-decoration: none;
+                        color: #232536;
+                    }
                 }
 
                 p:hover{
@@ -87,6 +92,10 @@
                     transition: ease .2s;
                     font-weight: bold;
                     cursor: pointer;
+
+                    a{
+                        color: #ffd050;
+                    }
                 }
     
                 p:not(:hover){
