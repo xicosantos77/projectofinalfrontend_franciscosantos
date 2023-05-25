@@ -72,7 +72,7 @@ const allCategories = [
         longTitle: 'Stay Updated with the Latest Cellphone Repair News, Tips, and Trends',
         shortDesc: 'Stay informed with the latest news, tips, and trends in cellphone repair.',
         longDesc: 'Our blog and news section keeps you informed about the latest happenings in the cellphone repair industry. Discover useful tips, stay updated on repair techniques, and learn about emerging trends and technologies in the field.'
-    }
+    },
 ]; 
 
 export default allCategories;

@@ -11,7 +11,7 @@ const JoinUs = () => {
                 <p>We are always looking for challenge-seekers. Send us your info.</p>
             </div>
             <div className="joinus-button">
-                <div><Link to="/ContactUs">Join Now</Link></div>
+                <div><Link to="/ContactUs"><h2>Join Now</h2></Link></div>
             </div>
         </div>
     )

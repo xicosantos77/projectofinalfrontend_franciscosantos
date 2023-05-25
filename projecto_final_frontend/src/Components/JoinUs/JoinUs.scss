@@ -7,10 +7,18 @@
     .joinus-text{
         h2{
             font-size: 36px;
+
+            @media screen and (max-width: 1200px){
+                font-size: 22px;
+            }
         }
         p{
             text-align: center;
             font-size: 16px;
+
+            @media screen and (max-width: 1200px){
+                font-size: 12px;
+            }
         }
     }
 
@@ -19,6 +27,26 @@
         background-color: #ffd050;
         border: none;
         font-weight: bold;
+        margin-top: 20px;
+
+        @media screen and (max-width: 1440px){
+            div{
+                a{
+                    h2{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 1200px){
+            div{
+                a{
+                    h2{
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
 
         a{
             text-decoration: none;
@@ -26,7 +54,6 @@
                 margin: 0px;
                 font-size: 20px;
                 color: #232536;
-                
             }
         }
     }

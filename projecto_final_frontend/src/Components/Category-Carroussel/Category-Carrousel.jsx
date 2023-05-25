@@ -32,6 +32,7 @@ const CategoryCarroussel= ()=> {
             <div className="category-carroussel-title">
                 <h2>Choose a Category</h2>
             </div>
+
             <div className="category-carroussel-carroussel">
                 {allCategories.slice(visibleRange[0],visibleRange[1] + 1).map((category,index) =>( 
                     <div 
@@ -45,6 +46,7 @@ const CategoryCarroussel= ()=> {
                     </div>
                     ))};
             </div>
+
             <div className="category-carroussel-buttons">
                 <div
                 className="category-carroussel-buttons-prev"
@@ -62,6 +64,7 @@ const CategoryCarroussel= ()=> {
                     <h1>&gt;</h1>
                 </div>
             </div>
+            
             <div className="category-carroussel-display">
                 <div className="category-carroussel-display-img">
                     <img src={allCategories[selectedCategory].image} alt="" />

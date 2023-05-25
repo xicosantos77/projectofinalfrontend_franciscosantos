@@ -27,54 +27,50 @@ const Testimonials = () => {
 
     return (
         <div className="testimonials">
-          <div className="testimonials-text">
-            <h3>TESTIMONIALS</h3>
-            <h2>What people say about our blog</h2>
-            <p>
-            We are very keen on meeting our clients needs. If you were not satidfied we are more then happy in listening to your needs ir order to provide the best possible service!
-            </p>
-          </div>
-          <div className="testimonials-carousel">
-            <div className="testimonials-carousel-inner">
-              {authors.map((authors, index) => (
-                <div
-                  key={index}
-                  className={`testimonials-carousel-slide ${
-                    index === activeIndex ? "active" : ""
-                  }`}
-                >
-                  <div className="testimonials-carousel-content">
-                    <h2>{authors.testimonial}</h2>
-                  </div>
-                  <div className="testimonials-carousel-content-author">
-                    <div className="testimonials-carousel-content-author-photo">
-                      <div>
-                        <img src={authors.author} alt="" />
-                        <h2>{authors.name}</h2>
-                      </div>
-                      <p>{authors.location}</p>
+            <div className="testimonials-text">
+                <h3>TESTIMONIALS</h3>
+                <h2>What people say about our blog</h2>
+                <p>
+                We are very keen on meeting our clients' needs. If you were not satisfied, we are more than happy in listening to your needs in order to provide the best possible service!
+                </p>
+            </div>
+        
+            <div className="testimonials-carousel">
+                <div className="testimonials-carousel-inner">
+                {authors.map((authors, index) => (
+                    <div
+                    key={index}
+                    className={`testimonials-carousel-slide ${
+                        index === activeIndex ? "active" : ""
+                    }`}
+                    >
+                        <div className="testimonials-carousel-content">
+                            <h2>{authors.testimonial}</h2>
+                        </div>
+                        <div className="testimonials-carousel-content-author">
+                            <div className="testimonials-carousel-content-author-photo">
+                                <img src={authors.author} alt="" />
+                                <div>
+                                    <h2>{authors.name}</h2>
+                                    <p>{authors.location}</p>
+                                </div>
+                            </div>
+                            <div className="testimonials-carousel-controls">
+                                <div className="testimonials-carousel-controls-prev" onClick={handlePrev}>
+                                    <h1>&lt;</h1>
+                                </div>
+                                <div className="testimonials-carousel-controls-next" onClick={handleNext}>
+                                    <h1>&gt;</h1>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                  </div>
+                ))}
                 </div>
-              ))}
             </div>
-            <div className="testimonials-carousel-controls">
-              <div
-                className="testimonials-carousel-control testimonials-carousel-control-prev"
-                onClick={handlePrev}
-              >
-                &lt;
-              </div>
-              <div
-                className="testimonials-carousel-control testimonials-carousel-control-next"
-                onClick={handleNext}
-              >
-                &gt;
-              </div>
-            </div>
-          </div>
         </div>
     );
+      
 
 }
 
