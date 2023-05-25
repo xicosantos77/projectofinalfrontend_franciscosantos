@@ -1,91 +1,15 @@
 import "./Post-Section.scss"; 
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom'; 
+import items from "../../Data/items";
 
 const Post_Section = ()=>{
-
-    const allPosts = [
-        {
-            image: 'Images-public/Post_Section/Images/image1.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post1'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image2.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post2'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image3.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post3'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image4.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post4'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image5.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post5'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image6.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post6'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image1.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post7'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image2.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post8'
-        }, 
-        {
-            image: 'Images-public/Post_Section/Images/image3.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post9'
-        },
-        {
-            image: 'Images-public/Post_Section/Images/image4.jpg',
-            author: 'By Francisco Santos',
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, pariatur',
-            desc: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero fugiat ducimus doloremque sequi adipisci quod vitae dicta, iste corporis laudantium!',
-            link: '/Post10'
-        }
-    ];
-
-    //para selecionar cada post
 
     const [selectedPost, setSelectedPost] = useState(0);
 
     const handlePostClick = (index) => {
         setSelectedPost(index);
     }
-
-
 
     return(
         <div className="postsection">
@@ -95,14 +19,14 @@ const Post_Section = ()=>{
                 </div>
                 <div className="postsection-featuredposts-content">
                     <div className="postsection-featuredposts-content-img">
-                        <img src={allPosts[selectedPost].image} alt="" />
+                        <img src={items[selectedPost].image} alt="" />
                     </div>
                     <div className="postsection-featuredposts-content-desc">
-                        <p>{allPosts[selectedPost].author} | May, 2023</p>
-                        <h2>{allPosts[selectedPost].title}</h2>
-                        <p>{allPosts[selectedPost].desc}</p>
+                        <p>{items[selectedPost].author} | May, 2023</p>
+                        <h2>{items[selectedPost].title}</h2>
+                        <p>{items[selectedPost].description}</p>
                         <div className="postsection-featuredposts-content-desc-button">
-                            <Link to={allPosts[selectedPost].link}><h2>See more &gt;</h2></Link>
+                            <Link to={items[selectedPost].link}><h2>See more &gt;</h2></Link>
                         </div>
                     </div>
                 </div>
@@ -117,12 +41,12 @@ const Post_Section = ()=>{
                     </div>
                 </div>
                 <div className="postsection-allposts-list">
-                    {allPosts.map((post, index) => ( 
+                    {items.map((post, index) => ( 
 
                     <div className="postsection-allposts-list-post" 
-                        key={index}
-                        onClick={() => handlePostClick(index)}
-                        >
+                    key={index}
+                    onClick={() => handlePostClick(index)}
+                    >
                         <p>{post.author}</p>
                         <h2>{post.title}</h2>
                     </div>

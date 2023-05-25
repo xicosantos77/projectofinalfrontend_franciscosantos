@@ -2,6 +2,7 @@ import "./Carroussel.scss";
 import React, {useState} from 'react';
 import {useEffect} from "react";
 import {Link} from "react-router-dom";
+import items from "../../Data/items";
 
 const Carroussel = ()=> {
 
@@ -37,59 +38,6 @@ const Carroussel = ()=> {
         };
     }, [activeIndex]);
 
-    // Array de items para o carroussel
-
-    const items = [
-        {
-            image: './Images-public/Carroussel/Images/image1.jpg',
-            postedOn: 'POSTED ON STARTUP',
-            title: 'Step-by-step guide to choosing great font pairs',
-            author: 'By Francisco Santos | May 26, 2023',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, nisi soluta deleniti iusto aut ipsum. Incidunt maiores cumque magnam fugiat?',
-            link: '/Post1'
-        }, 
-        {
-            image: './Images-public/Carroussel/Images/image2.jpg',
-            postedOn: 'POSTED ON STARTUP',
-            title: 'Step-by-step guide to choosing great font pairs',
-            author: 'By Francisco Santos | May 26, 2023',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, nisi soluta deleniti iusto aut ipsum. Incidunt maiores cumque magnam fugiat?',
-            link: '/Post2'
-        }, 
-        {
-            image: './Images-public/Carroussel/Images/image3.jpg',
-            postedOn: 'POSTED ON STARTUP',
-            title: 'Step-by-step guide to choosing great font pairs',
-            author: 'By Francisco Santos | May 26, 2023',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, nisi soluta deleniti iusto aut ipsum. Incidunt maiores cumque magnam fugiat?',
-            link: '/Post3'
-        }, 
-        {
-            image: './Images-public/Carroussel/Images/image4.jpg',
-            postedOn: 'POSTED ON STARTUP',
-            title: 'Step-by-step guide to choosing great font pairs',
-            author: 'By Francisco Santos | May 26, 2023',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, nisi soluta deleniti iusto aut ipsum. Incidunt maiores cumque magnam fugiat?',
-            link: '/Post4'
-        }, 
-        {
-            image: './Images-public/Carroussel/Images/image5.jpg',
-            postedOn: 'POSTED ON STARTUP',
-            title: 'Step-by-step guide to choosing great font pairs',
-            author: 'By Francisco Santos | May 26, 2023',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, nisi soluta deleniti iusto aut ipsum. Incidunt maiores cumque magnam fugiat?',
-            link: '/Post5'
-        }, 
-        {
-            image: './Images-public/Carroussel/Images/image6.jpg',
-            postedOn: 'POSTED ON STARTUP',
-            title: 'Step-by-step guide to choosing great font pairs',
-            author: 'By Francisco Santos | May 26, 2023',
-            description: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt, nisi soluta deleniti iusto aut ipsum. Incidunt maiores cumque magnam fugiat?',
-            link: '/Post6'
-        }, 
-    ]
-
     return (
         <div className="carroussel">
             <div className="carroussel-inner">
@@ -110,7 +58,7 @@ const Carroussel = ()=> {
                             {item.title}
                         </h1>
                         <h6 className="carroussel-item-textbox-author">
-                            {item.author}
+                            {item.author} | May 26, 2023
                         </h6>
                         <p className="carroussel-item-textbox-desc">
                             {item.description}

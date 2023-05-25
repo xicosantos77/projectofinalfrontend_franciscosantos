@@ -1,0 +1,47 @@
+.joinus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 80px;
+
+    .joinus-text{
+        h2{
+            font-size: 36px;
+        }
+        p{
+            text-align: center;
+            font-size: 16px;
+        }
+    }
+
+    .joinus-button{
+        padding: 16px 48px;
+        background-color: #ffd050;
+        border: none;
+        font-weight: bold;
+
+        a{
+            text-decoration: none;
+            h2{
+                margin: 0px;
+                font-size: 20px;
+                color: #232536;
+                
+            }
+        }
+    }
+
+    .joinus-button:hover{
+        transform: scale(1.1);
+        transition: ease .5s;
+        font-weight: bold;
+        cursor: pointer;
+        border: 1px solid orange;
+        border-radius: 10px;
+    }
+
+    .joinus-button:not(:hover){
+        transform: scale(1);
+        transition: ease-in-out .2s;
+    }
+}
