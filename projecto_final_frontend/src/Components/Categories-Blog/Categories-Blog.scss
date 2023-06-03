@@ -1,0 +1,105 @@
+.category-carroussel{
+    padding: 0px 80px 20px 80px;
+
+    @media screen and (max-width: 576px){
+        padding: 40px;
+    } 
+
+    .category-carroussel-title{
+        font-size: 32px;
+        text-align: left;
+
+        @media screen and (max-width: 1440px){
+            font-size: 20px;
+        } 
+
+        @media screen and (max-width: 1200px){
+            font-size: 16px;
+        } 
+    }
+
+    .category-carroussel-carroussel{
+        width: 100%;
+        display: flex;
+        overflow: hidden;
+    
+        .category-carroussel-carroussel-item{
+            background-color: #f4f4f4;
+            border: 1px solid #232323;
+            padding: 32px;
+            margin: 16px;
+            height: 240px;
+            width: 25%;
+
+            @media screen and (max-width: 1440px){
+                height: 180px;
+            } 
+
+            @media screen and (max-width: 1200px){
+                height: 190px;
+            } 
+            
+            @media screen and (max-width: 576px){
+                height: 150px;
+                width: 100%;
+                align-items: center;
+
+                p{
+                    display: none;
+                }
+            } 
+
+            img{
+                width: 48px;
+                height: 48px;
+                filter: grayscale(50%);
+            }
+            h3{
+                font-size: 28px;
+
+                @media screen and (max-width: 1440px){
+                    font-size: 16px;
+                } 
+            }
+            p{
+                font-size: 18px;
+
+                @media screen and (max-width: 1440px){
+                    font-size: 16px;
+                } 
+            }
+        }
+
+        .category-carroussel-carroussel-item:hover{
+            transform: scale(1.05);
+            transition: ease .2s;
+            font-weight: bold;
+            background-color: #ffd050;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        .category-carroussel-carroussel-item:not(:hover){
+            transform: scale(1);
+            transition: ease-in-out .2s;
+        }
+      
+    }
+
+    .category-carroussel-buttons{
+        width: 100%;
+        display: flex;
+        padding-left: 16px;
+        padding-right: 16px;
+        margin-bottom: 10px;
+
+        .category-carroussel-buttons-prev{
+            width: 50%;
+        }
+        .category-carroussel-buttons-next{
+            width: 50%;
+            text-align: right;
+            padding-right: 30px;
+        }
+    }
+}

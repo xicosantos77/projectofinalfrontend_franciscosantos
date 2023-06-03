@@ -1,0 +1,46 @@
+.carrousselItems{
+    padding: 80px;
+
+    .carrousselItems-items{
+        display: flex;
+        height: 450px;
+
+        a{
+            text-decoration: none;
+            color: #232523;
+        }
+
+        a:hover{
+            transform: scale(1.02);
+            transition: ease .2s;
+            font-weight: bold;
+            background-color: #ffd050;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        a:not(:hover){
+            transform: scale(1);
+            transition: ease-in-out .2s;
+        }
+
+        .carrousselItems-items-item-photo{
+            padding: 16px;
+        }
+        .carrousselItems-items-item-text{
+            padding: 0px 16px 0px 16px;
+        }
+    }
+
+    .carrousselItems-buttons{
+        display: flex;
+        justify-content: space-around;
+
+        h1:hover{
+            cursor: pointer;
+        }
+    }
+
+
+
+}

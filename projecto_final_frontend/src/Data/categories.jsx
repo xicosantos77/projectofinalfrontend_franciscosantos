@@ -64,7 +64,7 @@ const allCategories = [
         shortDesc: 'Practical tips for cellphone maintenance and keeping your device in optimal condition.',
         longDesc: 'Discover practical tips and advice on cellphone maintenance, including battery care, software updates, storage management, and more. Following these tips will help you keep your cellphone in top shape and prolong its lifespan.'
     },
-    {
+    { 
         image: 'Images-public/Carroussel-Categories/Images/image2.jpg',
         icon: './Images-public/Carroussel-Categories/Icons/rocket.png',
         introduction: 'NEWS FOR YOU TO BE UPDATED',
