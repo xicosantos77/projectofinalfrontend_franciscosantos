@@ -1,6 +1,12 @@
 .privacyPolicy{
-    padding: 40px 400px 80px 400px; 
+    margin: 0 auto; 
+    width: 60%;
     text-align: center;
+    padding-bottom: 80px;
+
+    @media screen and (max-width: 576px){
+        width: 80%;
+    }
 
     ul{
         list-style: none;

@@ -1,3 +1,7 @@
+@import "../font-sizes";
+@import "../mixins";
+
+
 .postsection{
     padding-left: 48px;
     padding-right: 48px;
@@ -7,8 +11,8 @@
     @media screen and (max-width: 576px){
         display: flex;
         flex-direction: column;
-        padding-left: 20px;
-        padding-right: 20px;
+        padding-left: 40px;
+        padding-right: 40px;
     } 
 
     .postsection-featuredposts{
@@ -16,23 +20,26 @@
         padding: 32px;
 
         @media screen and (max-width: 576px){
+            
             width: 100%;
+            padding: 0;
         } 
 
         .postsection-featuredposts-title{
-            font-size: 28px;
             padding-bottom: 32px;
 
-            @media screen and (max-width: 1440px){
-                font-size: 16px;
-            }
-
             @media screen and (max-width: 576px){
+                margin-top: 20px;
                 text-align: center;
             }
 
             h2{
+                font-size: $h2-size;
                 margin: 0px;
+
+                @media screen and (max-width: 576px){
+                    font-size: $h2-size-bg;                    
+                }
             }
         }
 
@@ -45,8 +52,10 @@
                 } 
 
                 h2{
+                    font-size: $h3-size;
+
                     @media screen and (max-width: 1200px){
-                        font-size: 16px;
+                        font-size: $h3-size-bg;
                     } 
 
                     @media screen and (max-width: 576px){
@@ -56,9 +65,10 @@
 
                 p{
                     padding-bottom: 20px;
+                    font-size: $p1-size;
 
                     @media screen and (max-width: 1200px){
-                        font-size: 12px;
+                        font-size: $p1-size-bg;
                     } 
 
                     @media screen and (max-width: 576px){
@@ -67,12 +77,9 @@
                 }
 
                 .postsection-featuredposts-content-desc-button{
+                    @include button(#ffd050,#232523);
                     width: 110px;
-                    padding: 16px 48px;
-                    background-color: #ffd050;
-                    border: none;
-                    font-weight: bold;
-
+                    
                     @media screen and (max-width: 1440px){
                         width: 90px;
                     } 
@@ -82,35 +89,15 @@
                     } 
 
                     a{
-                        text-decoration: none;
                         h2{
-                            margin: 0px;
-                            font-size: 20px;
-                            color: #232536;
-
                             @media screen and (max-width: 1440px){
-                                font-size: 16px;
+                                font-size: $p1-size;
                             } 
-
                             @media screen and (max-width: 1200px){
-                                font-size: 12px;
+                                font-size: $p1-size-bg;
                             } 
                         }
                     }
-                }
-
-                .postsection-featuredposts-content-desc-button:hover{
-                    transform: scale(1.1);
-                    transition: ease .5s;
-                    font-weight: bold;
-                    cursor: pointer;
-                    border: 1px solid orange;
-                    border-radius: 10px;
-                }
-    
-                .postsection-featuredposts-content-desc-button:not(:hover){
-                    transform: scale(1);
-                    transition: ease-in-out .2s;
                 }
             }
         }
@@ -122,6 +109,7 @@
 
         @media screen and (max-width: 576px){
             width: 100%;
+            padding: 0;
         } 
 
         .postsection-allposts-nav{
@@ -130,11 +118,15 @@
 
             .postsection-allposts-nav-title{
                 width: 50%;
-                font-size: 28px;
 
-                @media screen and (max-width: 1440px){
-                    font-size: 16px;
+                h2{
+                    font-size: $h2-size;
+
+                    @media screen and (max-width: 576px){
+                        font-size: $p1-size;
+                    }
                 }
+
 
                 h2{
                     margin: 0px;
@@ -147,23 +139,19 @@
 
                 @media screen and (max-width: 1200px){
                     a{
-                        font-size: 16px;
+                        font-size: $p1-size;
                     }
                 } 
 
                 p{
                     text-decoration: none;
                     text-align: right;
-                    font-size: 20px;
+                    font-size: $p1-size;
                     cursor: pointer;
 
                     a{
                         text-decoration: none;
                         color: #232536;
-                    }
-
-                    @media screen and (max-width: 1200px){
-                        font-size: 16px;
                     }
                 }
 
@@ -219,12 +207,20 @@
                 padding-top: 10px;
                 padding-bottom: 10px;
 
+                p{
+                    font-size: $p2-size;
+                }
+
+                h2{
+                    font-size: $h5-size;
+                }
+
                 @media screen and (max-width: 1200px){
                     p{
-                        font-size: 12px;
+                        font-size: $p1-size-bg;
                     }
                     h2{
-                        font-size: 16px;
+                        font-size: $h3-size-bg;
                     }
                 } 
 

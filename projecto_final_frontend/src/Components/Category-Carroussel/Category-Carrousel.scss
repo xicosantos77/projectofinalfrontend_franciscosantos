@@ -1,3 +1,6 @@
+@import "../font-sizes";
+@import "../mixins";
+
 .category-carroussel{
     padding: 0px 80px 20px 80px;
 
@@ -6,15 +9,15 @@
     } 
 
     .category-carroussel-title{
-        font-size: 32px;
+        font-size: $h3-size;
         text-align: center;
 
-        @media screen and (max-width: 1440px){
-            font-size: 20px;
+        @media screen and (max-width: 1200px){
+            font-size: $h3-size-bg;
         } 
 
         @media screen and (max-width: 1200px){
-            font-size: 16px;
+            font-size: $h4-size-bg;
         } 
     }
 
@@ -22,30 +25,53 @@
         width: 100%;
         display: flex;
         overflow: hidden;
+        justify-content: space-around;
+        height: 350px;
+
+        @media screen and (max-width: 1200px){
+            height: 280px;
+        }
+
+        @media screen and (max-width: 576px){
+            height: 220px;
+        }
     
         .category-carroussel-carroussel-item{
             background-color: #f4f4f4;
             border: 1px solid #232323;
-            padding: 32px;
-            margin: 16px;
-            height: 240px;
-            width: 25%;
-
+            max-height: 240px;
+            width: 20%;
+            padding: 20px;
+            justify-content: space-around;
+            
             @media screen and (max-width: 1440px){
                 height: 180px;
             } 
-
+            
             @media screen and (max-width: 1200px){
+                width: 33.33%;
                 height: 190px;
+                &:not(:nth-child(-n + 3)) {
+                    display: none; // Hide items except the first three
+                }
             } 
             
             @media screen and (max-width: 576px){
                 height: 150px;
-                width: 100%;
+                width: 18%;
                 align-items: center;
+
+                img{
+                    padding: 15%;
+                }
 
                 p{
                     display: none;
+                }
+
+                h3{
+                    text-align: center;
+                    font-size: $h3-size-md;
                 }
             } 
 
@@ -54,19 +80,9 @@
                 height: 48px;
                 filter: grayscale(50%);
             }
-            h3{
-                font-size: 28px;
-
-                @media screen and (max-width: 1440px){
-                    font-size: 16px;
-                } 
-            }
+         
             p{
-                font-size: 18px;
-
-                @media screen and (max-width: 1440px){
-                    font-size: 16px;
-                } 
+                font-size: $p1-size;
             }
         }
 
@@ -105,7 +121,7 @@
 
     .category-carroussel-display{
         position: relative;
-        padding-bottom: 200px;
+        padding-bottom: 80px;
 
         .category-carroussel-display-img{
             max-width: 75%;
@@ -133,61 +149,33 @@
             background-color: #f4f4f4;
             padding: 80px;
 
-            @media screen and (max-width: 1440px){
-
+            @media screen and (max-width: 576px){
+                padding: 40px;
             }
 
             h3{
-                font-size: 16px;
+                font-size: $h3-size-bg;
             }
 
             h2{
-                font-size: 48px;
+                font-size: $h2-size;
 
-                @media screen and (max-width: 1440px){
-                    font-size: 32px;
-                } 
 
                 @media screen and (max-width: 1200px){
-                    font-size: 22px;
+                    font-size: $title-size-md;
                 } 
             }
 
             p{
-                font-size: 16px;
+                font-size: $p1-size;
                 padding-bottom: 40px;
             }
             
             div{
                 a{
+                    @include button(#ffd050,#232523);
                     text-decoration: none;
-                    font-size: 20px;
-                    padding: 16px 48px;
-                    background-color: #ffd050;
-
-                    @media screen and (max-width: 1440px){
-                        font-size: 16px;
-                    } 
-
-                    @media screen and (max-width: 1440px){
-                        font-size: 12px;
-                    } 
-
                 }
-            }
-
-            div:hover{
-                transform: scale(1.1);
-                transition: ease .5s;
-                font-weight: bold;
-                cursor: pointer;
-                
-                border-radius: 10px;
-            }
-
-            div:not(:hover){
-                transform: scale(1);
-                transition: ease-in-out .2s;
             }
         }
     }
@@ -208,21 +196,21 @@
         }
       
         .category-carroussel-display-desc {
-          padding: 40px;
+            padding: 40px;
       
-          h2 {
-            font-size: 24px;
-          }
+            h2 {
+                font-size: 24px;
+            }
       
-          p {
-            font-size: 14px;
-            padding-bottom: 20px;
-          }
+            p {
+                font-size: 14px;
+                padding-bottom: 20px;
+            }
       
-          div a {
-            font-size: 16px;
-            padding: 12px 32px;
-          }
+            div a {
+                font-size: 16px;
+                padding: 12px 32px;
+            } 
         }
-      }
+    }
 }

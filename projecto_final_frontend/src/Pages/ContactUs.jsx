@@ -10,8 +10,6 @@ const ContactUs = () => {
   const handleSendMessage = () => {
     const name = nameInput.current.value;
     const email = emailInput.current.value;
-    const option = optionInput.current.value;
-    const message = messageInput.current.value;
 
     if (name.trim() === '') {
       alert('Please enter your name.');

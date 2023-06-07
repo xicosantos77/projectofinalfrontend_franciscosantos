@@ -1,8 +1,9 @@
 @import "./Assets/Fonts/fonts.scss"; 
+@import url('https://fonts.googleapis.com/css2?family=Sen:wght@400;700;800&display=swap');
   
 body{
     min-height: 100vh;
-    
+    font-family: 'Sen', sans-serif;
 }
   
 img, picture,svg,video{

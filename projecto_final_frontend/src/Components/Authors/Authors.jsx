@@ -1,6 +1,5 @@
 import "./Authors.scss"; 
 import React from "react";
-import {Link} from "react-router-dom";
 import authors from "../../Data/authors";
 
 
@@ -24,7 +23,7 @@ const Authors= ()=> {
                                 <a href={post.twitter}><img src='Images-public/Authors/Images/Icons/twitter.png' alt="" /></a>
                             </div>
                         </div>
-                    ))};
+                    ))}
             </div>
             <div className="authors-featured">
                 <div className="authors-featured-icon">

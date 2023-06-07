@@ -1,3 +1,6 @@
+@import "../font-sizes";
+@import "../mixins";
+
 .hidden{
     display: none;
 }
@@ -5,18 +8,6 @@
 .carroussel{
     .carroussel-inner{
         width: 100%;
-        /*  PARA FAZER UMA TRANSIÇÃO SMOOTH
-        transition: transform 2s ease-in-out;
-
-        .carroussel-item{
-            &.active{
-                transform: translateX(0%);
-            }
-            &.hidden{
-                transform: translateX(-100%);
-            }
-        }
-        */
 
         .carroussel-item-img{
             position: relative;
@@ -47,16 +38,12 @@
                 }
 
                 .carroussel-item-textbox-title1{
-                    font-size: 20px;
+                    font-size: $h6-size;
                     margin-top: 0px;
                     margin-bottom: 24px;
 
-                    @media screen and (max-width: 1440px){
-                        font-size: 16px;
-                    }
-
                     @media screen and (max-width: 1200px){
-                        font-size: 12px;
+                        font-size: $h6-size-bg;
                         margin-bottom: 20px;
                     }
 
@@ -65,16 +52,16 @@
                     }
                 }
                 .carroussel-item-textbox-title2{
-                    font-size: 56px;
+                    font-size: $title-size;
                     margin-top: 0px;
                     margin-bottom: 24px;
 
                     @media screen and (max-width: 1440px){
-                        font-size: 30px;
+                        font-size: $title-size-bg;
                     }
 
                     @media screen and (max-width: 1200px){
-                        font-size: 24px;
+                        font-size: $title-size-md;
                         margin-bottom: 20px;
                     }
 
@@ -85,16 +72,12 @@
 
                 }
                 .carroussel-item-textbox-author{
-                    font-size: 28px;
+                    font-size: $h6-size;
                     margin-top: 0px;
                     margin-bottom: 24px;
 
-                    @media screen and (max-width: 1440px){
-                        font-size: 16px;
-                    }
-
                     @media screen and (max-width: 1200px){
-                        font-size: 12px;
+                        font-size: $h6-size-bg;
                         margin-bottom: 20px;
                     }
 
@@ -103,16 +86,13 @@
                     }
                 }
                 .carroussel-item-textbox-desc{
-                    font-size: 28px;
+                    font-size: $p1-size;
                     margin-top: 0px;
                     margin-bottom: 24px;
 
-                    @media screen and (max-width: 1440px){
-                        font-size: 16px;
-                    }
 
                     @media screen and (max-width: 1200px){
-                        font-size: 12px;
+                        font-size: $p1-size-bg;
                         margin-bottom: 20px;
                     }
 
@@ -122,20 +102,8 @@
                 }
 
                 .carroussel-item-textbox-button{
+                    @include button(#ffd050,#232523);
                     width: 130px;
-                    padding: 16px 32px;
-                    background-color: #ffd050;
-                    border: none;
-                    font-weight: bold;
-
-                    a{
-                        text-decoration: none;
-                        h2{
-                            margin: 0px;
-                            font-size: 20px;
-                            color: black;
-                        }
-                    }
 
                     @media screen and (max-width: 1440px){
                         width: 80px;
@@ -152,33 +120,19 @@
                     @media screen and (max-width: 1200px){
                         width: 80px;
                         padding: 8px 20px;
-                        font-size: 12px;
 
                         a{
                             h2{
-                                font-size: 12px;
+                                font-size: $p1-size-bg;
                                 color: black;
                             }
                         }
                     }
 
                     @media screen and (max-width: 576px){
-                        width: 15%;
+                        width: 16%;
                     }
                 }
-
-                .carroussel-item-textbox-button:hover{
-                    transform: scale(1.1);
-                    transition: ease .5s;
-                    font-weight: bold;
-                    cursor: pointer;
-                }
-    
-                .carroussel-item-textbox-button:not(:hover){
-                    transform: scale(1);
-                    transition: ease-in-out .2s;
-                }
-
             }
         }
 
@@ -229,7 +183,7 @@
             }
 
             @media screen and (max-width: 576px){
-                font-size: 10px;
+                font-size: $p2-size-bg;
             }
         }
 
@@ -252,7 +206,7 @@
             }
 
             @media screen and (max-width: 576px){
-                font-size: 10px;
+                font-size: $p2-size-bg;
             }
         }
 

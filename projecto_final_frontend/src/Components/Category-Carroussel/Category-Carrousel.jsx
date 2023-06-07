@@ -44,7 +44,7 @@ const CategoryCarroussel= ()=> {
                         <h3>{category.shortTitle}</h3>
                         <p>{category.shortDesc}</p>
                     </div>
-                    ))};
+                    ))}
             </div>
 
             <div className="category-carroussel-buttons">

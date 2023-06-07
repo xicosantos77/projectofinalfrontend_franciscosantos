@@ -7,8 +7,8 @@ const FeaturedPost = ()=> {
         <div className="featuredPost">
             <div className="featuredPost-text">
                 <h6>FEATURED POST</h6>
-                <h2>Step-by-step guide to choosing great font pairs</h2>
-                <label>By Francisco Santos</label>
+                <h2>Common Cellphone Problems and How to Fix Them</h2>
+                <label>By Andrew Johnson</label>
                 <p>Learn about common cellphone issues and discover solutions for fixing them.</p>
 
                 <div className="featuredPost-text-button">

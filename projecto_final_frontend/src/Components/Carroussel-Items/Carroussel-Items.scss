@@ -1,5 +1,11 @@
+@import "../font-sizes";
+
 .carrousselItems{
     padding: 80px;
+
+    @media screen and (max-width: 576px){
+        padding: 40px;
+    }
 
     .carrousselItems-items{
         display: flex;
@@ -30,6 +36,24 @@
         .carrousselItems-items-item-text{
             padding: 0px 16px 0px 16px;
         }
+
+        @media screen and (max-width: 576px){
+            p{
+                font-size: $p1-size-bg;
+            }
+
+            h3{
+                font-size: $h3-size-bg;
+            }
+
+            p{
+                display: $p2-size;
+            }
+
+            img{
+                height: 150px;
+            }
+        }
     }
 
     .carrousselItems-buttons{
@@ -38,6 +62,10 @@
 
         h1:hover{
             cursor: pointer;
+        }
+
+        @media screen and (max-width: 576px){
+            font-size: $h3-size-md;
         }
     }
 

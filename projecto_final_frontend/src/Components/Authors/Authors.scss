@@ -1,14 +1,17 @@
+@import "../font-sizes";
+
 .authors{
     display: flex;
     flex-direction: column;
     padding: 4px 80px 20px 80px;
 
-    @media screen and (max-height:1200px){
+    @media screen and (max-width:1200px){
+        padding-top: 100px;
         margin-top: 40px;
     }
 
     @media screen and (max-width: 576px){
-        margin-top: 300px;
+        margin-top: 150px;
         display: flex;
         flex-direction: column;
         padding: 4px 20px 20px 20px;
@@ -16,18 +19,14 @@
 
     .authors-title{
         text-align: center;
-        font-size: 32px;
+        font-size: $h3-size;
 
         h2{
             margin: 0;
-
-            @media screen and (max-width: 1440px){
-                font-size: 32px;
-            } 
-
+            
             @media screen and (max-width: 576px){
                 text-align: center;
-                font-size: 24px;
+                font-size: $h2-size-bg;
             } 
         }
     }
@@ -41,7 +40,7 @@
         @media screen and (max-width: 576px){
             display: flex;
             flex-wrap: wrap;
-            margin-top: 80px;
+            margin-top: 20px;
         } 
         
         .authors-authors-item{
@@ -53,10 +52,13 @@
             align-items: center;
             width: 25%;
 
+            img{
+                border-radius: 100%;
+            }
+
             @media screen and (max-width: 576px){
                 background-color: #f4f4f4;
-                padding: 20px;
-                margin: 20px;
+                padding: 40px;
                 display: flex;
                 flex-direction: column;
                 align-items: center;

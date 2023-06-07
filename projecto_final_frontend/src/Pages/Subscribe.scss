@@ -1,16 +1,39 @@
+@import "../Components/font-sizes";
+
 .subscribe{
-    padding: 80px 400px 80px 400px;
+    margin: 0 auto;
+    padding-bottom: 80px;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
 
+    @media screen and (max-width: 576px){
+        padding: 0px 40px 40px 40px;
+    }
+    
     .subscribe-text{
         padding-bottom: 0px;
+
+        h6{
+            font-size: $h6-size;
+
+            @media screen and (max-width: 576px){
+                font-size: $h6-size-bg;
+            }
+        }
+
+        h1{
+            font-size: $h2-size;
+
+            @media screen and (max-width: 576px){
+                font-size: $h1-size-bg;
+            }
+        }
     }
 
     .subscribe-form{
-        width: 800px;
+        width: 50%;
         padding-top: 40px;
 
         .subscribe-form-inputs{
