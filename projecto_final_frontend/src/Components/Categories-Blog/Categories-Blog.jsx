@@ -63,7 +63,6 @@ const CategoriesBlog= ()=> {
                     <h1>&gt;</h1>
                 </div>
             </div>
-
         </div>
     )
 }

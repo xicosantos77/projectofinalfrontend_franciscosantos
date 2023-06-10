@@ -2,7 +2,6 @@ import React from "react";
 import "./Post.scss"; 
 import JoinUs from "../../Components/JoinUs/JoinUs";
 import CarrousselItems from "../../Components/Carroussel-Items/Carroussel-Items";
-import items from "../../Data/items";
 
 const Post1= ()=> {
 
@@ -21,7 +20,7 @@ const Post1= ()=> {
                 <h1>Common Cellphone Problems and How to Fix Them</h1>
                 <div className="item-category">
                     <img src="./Images-public/Carroussel-Categories/Icons/rocket.png" alt="" />
-                    <h4>Startup</h4>
+                    <h4>Common Issues</h4>
                 </div>
                 <div className="item-photo">
                     <img src="./Images-public/Carroussel/Images/image1.jpg" alt="" />

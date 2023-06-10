@@ -19,8 +19,17 @@
     justify-content: left;
     
     h1{
-        color: #f4f4f4;
-        font-size: $title-size-bg;
+        a{
+            text-decoration: none;
+            color: #f4f4f4;
+            font-size: $title-size-bg;
+        }
+    }
+
+    h1:hover{
+        a{
+            color: darken(#f4f4f4, 30%);
+        }
     }
 }
 
@@ -44,6 +53,16 @@
 
             #subscribe-button{
                 margin-right: 0;
+            }
+
+            #subscribe-button:hover{
+                background-color: darken(#f4f4f4, 10%);
+                transform: scale(1.1);
+                transition: ease .5s;
+                font-weight: bold;
+                border: 1px solid #232523;
+                border-radius: 5px;
+                cursor: pointer;
             }
 
             li{
@@ -210,6 +229,7 @@
                             text-decoration: none;
                         }
                     }
+                    
                     li:hover{
                         transform: scale(1.1);
                         transition: ease .5s;

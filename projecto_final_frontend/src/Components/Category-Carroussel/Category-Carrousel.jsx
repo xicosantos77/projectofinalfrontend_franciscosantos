@@ -15,15 +15,15 @@ const CategoryCarroussel= ()=> {
 
     const handlePrevClick = () => {
         setVisibleRange((prevRange) => [
-          Math.max(prevRange[0] - 1, 0),
-          Math.max(prevRange[1] - 1, 3),
+            Math.max(prevRange[0] - 1, 0),
+            Math.max(prevRange[1] - 1, 3),
         ]);
     };
     
     const handleNextClick = () => {
         setVisibleRange((prevRange) => [
-          Math.min(prevRange[0] + 1, allCategories.length - 4),
-          Math.min(prevRange[1] + 1, allCategories.length - 1),
+            Math.min(prevRange[0] + 1, allCategories.length - 4),
+            Math.min(prevRange[1] + 1, allCategories.length - 1),
         ]);
     };
 

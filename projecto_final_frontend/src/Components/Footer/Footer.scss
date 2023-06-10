@@ -41,12 +41,22 @@
                 margin-bottom: 0;
             }  
 
-           h1{
-                color: #f4f4f4;
+            h1{
+                a{
+                    text-decoration: none;
+                    color: #f4f4f4;
+                    font-size: $title-size-bg;
+                }
             
                 @media screen and (max-width: 1200px){
                     font-size: $h1-size-bg;
                 }  
+            }
+
+            h1:hover{
+                a{
+                    color: darken(#f4f4f4, 30%);
+                }
             }
         }
 

@@ -83,7 +83,6 @@
             transform: scale(1);
             transition: ease-in-out .2s;
         }
-      
     }
 
     .category-carroussel-buttons{
@@ -92,6 +91,10 @@
         padding-left: 16px;
         padding-right: 16px;
         margin-bottom: 10px;
+
+        h1:hover{
+            cursor: pointer;
+        }
 
         .category-carroussel-buttons-prev{
             width: 50%;

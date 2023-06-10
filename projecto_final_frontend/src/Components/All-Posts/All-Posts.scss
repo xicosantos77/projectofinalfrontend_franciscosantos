@@ -104,10 +104,15 @@
             padding: 0;
             font-size: $h3-size;
             text-align: center;
+            cursor: pointer;
 
             @media screen and (max-width: 576px){
                 font-size: $h3-size-bg;
             }
+        }
+
+        h1:hover{
+            transform: scale(1.1);
         }
 
         .testimonials-carousel-controls-prev{
